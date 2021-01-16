@@ -1,19 +1,22 @@
 # About Project-Env
 
 ## TL;TR
-Project-Env automatically maintains the setup of project specific tools like a JDK or NodeJS.
+Project-Env automatically maintains the local setup of project specific tools like a JDK or NodeJS.
 
 ## Description
 
 ### Problem
 Before being able to start contributing to a project, I often have to follow project setup instructions. One thing, which is needed for almost every project, is installing required tools like a JDK or NodeJS. As I am working on multiple projects at the same time, the management of multiple versions of the same tool type gets complicated. If you for example have to install GraalVM for one project and AdoptOpenJDK for another, you have to ensure, that your IDE/Shell is always using the correct JDK in each project. It even gets more tedious if you have to maintain the tool versions in a CI/CD environment (e.g. in Jenkins through global tools).
 
-Until today, I couldn't find any good solution which completely handles that part of a project and that's the reason why I created Project-Env.
+Until today, I couldn't find any good solution which completely handles that part of a project (and still allows me to use my favourite IDE - IntelliJ). That's the reason why I created Project-Env.
 
 ### Solution
-The idea is to have a configuration file in each project which specifies which tools are needed to work with the project. This file can then be processed by any tool like the IDE to set itself up with the required tools.
 
-The goal of the Project-Env project is to define the format of the configuration file and to provide tools/plugins which allow the usage of Project-Env in a project (e.g. IntelliJ plugin).
+_Disclaimer: Since I mostly work in projects which needs tools like a JDK, Maven/Gradle or NodeJS, I currently only focus on that tools._
+
+The idea is to have a simple configuration file in each project which specifies which tools are needed to work with the project. This file can then be processed by any tool like the IDE or Shell to set itself up with the required tools.
+
+The goal of the Project-Env project is to define the format of the configuration file and to provide tools/plugins which allow the usage of Project-Env in a project (e.g. through a IntelliJ plugin).
 
 ### Current State
 At the moment the Project-Env project is more a draft than a production ready toolset.
