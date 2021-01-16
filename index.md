@@ -19,9 +19,9 @@ The goal of the Project-Env project is to define the format of the configuration
 At the moment the Project-Env project is more a draft than a production ready toolset.
 
 * [project-env-core](https://github.com/Project-Env/project-env-core): Java library which contains
-    * an initial draft of the configuration file format in form of an XML-Schema
-    * JAXB bindings for the XML-Schema
-    * a utility to read a configuration file with JAXB
+    * an initial draft of the configuration file format in form of an YAML-Schema
+    * Jackson bindings for the YAML-Schema
+    * a utility to read a configuration file with Jackson
     * a utility to install the tools into a specific directory
 
 * [project-env-cli](https://github.com/Project-Env/project-env-cli): Java CLI which allows to install the tools from a specified configuration file into a specific directory and to generate a Shell script to set up the tools in a shell environment (e.g. ZSH, Github Actions). The CLI is compiled into a standalone executable with the help of the GraalVM native image.
