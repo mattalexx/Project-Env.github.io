@@ -24,6 +24,6 @@ At the moment the Project-Env project is more a draft than a production ready to
     * a utility to read a configuration file with Jackson
     * a utility to install the tools into a specific directory
 
-* [project-env-cli](https://github.com/Project-Env/project-env-cli): Java CLI which allows to install the tools from a specified configuration file into a specific directory and to generate a Shell script to set up the tools in a shell environment (e.g. ZSH, Github Actions). The CLI is compiled into a standalone executable with the help of the GraalVM native image.
+* [project-env-shell](https://github.com/Project-Env/project-env-shell): Java CLI which allows to install the tools from a specified configuration file into a specific directory and to generate a Shell script to set up the tools in a shell environment (e.g. ZSH, Github Actions). The CLI is compiled into a standalone executable with the help of the GraalVM native image.
 
-* [project-env-intellij-plugin](https://github.com/Project-Env/project-env-intellij-plugin): IntelliJ plugin which reads the configuration file, installs the tools and configures itself to use the installed tools (e.g. adds a new JDK and sets it as project JDK).
+* [project-env-intellij](https://github.com/Project-Env/project-env-intellij-plugin): IntelliJ plugin which reads the configuration file, installs the tools and configures itself to use the installed tools (e.g. adds a new JDK and sets it as project JDK).
