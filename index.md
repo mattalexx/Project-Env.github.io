@@ -27,6 +27,14 @@ Project-Env consists of the following repositories:
   * Jackson bindings for the Project-Env configuration YAML-Schema
   * a utility to read a configuration file with the Jackson bindings
   * a utility to install the tools into a specific directory
+  
+#### Supported Tools
+* JDK
+* NodeJS
+* Gradle
+* Maven
+* Generic tools which are portable and can be downloaded as a single archive (e.g. JAXB-RI)
+* Git Hooks
 
 #### YAML-Schema
 
@@ -64,6 +72,9 @@ Project-Env consists of the following repositories:
                 "node": {
                     "$ref": "#/definitions/NodeConfiguration"
                 },
+                "gitHooks": {
+                    "$ref": "#/definitions/GitHooksConfiguration"
+                },
                 "genericTools": {
                     "type": "array",
                     "items": {
@@ -79,9 +90,6 @@ Project-Env consists of the following repositories:
             "type": "object",
             "additionalProperties": false,
             "properties": {
-                "toolName": {
-                    "type": "string"
-                },
                 "downloadUris": {
                     "type": "array",
                     "items": {
@@ -108,7 +116,6 @@ Project-Env consists of the following repositories:
                 }
             },
             "required": [
-                "toolName",
                 "downloadUris"
             ]
         },
@@ -155,9 +162,6 @@ Project-Env consists of the following repositories:
             "type": "object",
             "additionalProperties": false,
             "properties": {
-                "toolName": {
-                    "type": "string"
-                },
                 "downloadUris": {
                     "type": "array",
                     "items": {
@@ -190,7 +194,6 @@ Project-Env consists of the following repositories:
                 }
             },
             "required": [
-                "toolName",
                 "downloadUris"
             ]
         },
@@ -198,9 +201,6 @@ Project-Env consists of the following repositories:
             "type": "object",
             "additionalProperties": false,
             "properties": {
-                "toolName": {
-                    "type": "string"
-                },
                 "downloadUris": {
                     "type": "array",
                     "items": {
@@ -227,7 +227,6 @@ Project-Env consists of the following repositories:
                 }
             },
             "required": [
-                "toolName",
                 "downloadUris"
             ]
         },
@@ -235,9 +234,6 @@ Project-Env consists of the following repositories:
             "type": "object",
             "additionalProperties": false,
             "properties": {
-                "toolName": {
-                    "type": "string"
-                },
                 "downloadUris": {
                     "type": "array",
                     "items": {
@@ -264,17 +260,22 @@ Project-Env consists of the following repositories:
                 }
             },
             "required": [
-                "toolName",
                 "downloadUris"
             ]
+        },
+        "GitHooksConfiguration": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "directory": {
+                    "type": "string"
+                }
+            }
         },
         "GenericToolConfiguration": {
             "type": "object",
             "additionalProperties": false,
             "properties": {
-                "toolName": {
-                    "type": "string"
-                },
                 "downloadUris": {
                     "type": "array",
                     "items": {
@@ -301,7 +302,6 @@ Project-Env consists of the following repositories:
                 }
             },
             "required": [
-                "toolName",
                 "downloadUris"
             ]
         }
