@@ -22,12 +22,18 @@ The idea is to have a simple configuration file in each project which specifies 
 
 Project-Env currently consists of the following repositories:
 
-* [project-env-cli](https://github.com/Project-Env/project-env-cli): The raw CLI application which can be used by a Project-Env integration to setup all tools defined in the configuration file. As a result, the CLI will return a JSON describing the tools which were setup.
+* [project-env-cli](https://github.com/Project-Env/project-env-cli): Raw CLI application which can be used by a Project-Env integration to setup all tools defined in the configuration file. As a result, the CLI will return a JSON describing the tools which were setup.
   
-* [project-env-shell](https://github.com/Project-Env/project-env-shell): The shell integration application, which call the CLI to setup all tools and generates a Shell script to set up the tools in a shell environment (e.g. ZSH, Github Actions, Cygwin, ...).
+* [project-env-shell](https://github.com/Project-Env/project-env-shell): Shell integration application, which call the CLI to set up all tools and generates a Shell script to set up the tools in a shell environment (e.g. ZSH, Github Actions, Cygwin, ...).
 
-* [project-env-intellij](https://github.com/Project-Env/project-env-intellij-plugin): The IntelliJ plugin, which call the CLI to setup all tools and configures IntelliJ to use the installed tools (e.g. adds a new JDK and sets it as project JDK. See  [README](https://github.com/Project-Env/project-env-intellij-plugin/blob/master/README.md) for more details).
-  
+* [project-env-intellij](https://github.com/Project-Env/project-env-intellij-plugin): IntelliJ plugin, which calls the CLI to set up all tools and configures IntelliJ to use the installed tools (e.g. adds a new JDK and sets it as project JDK. See  [README](https://github.com/Project-Env/project-env-intellij-plugin/blob/master/README.md) for more details).
+
+* [project-env-github-action](https://github.com/Project-Env/project-env-github-action): Github action, which calls the CLI to set up all tools and configures the runner environment to use the installed tools.
+
+* [homebrew-tap](https://github.com/Project-Env/homebrew-tap): Project-Env Homebrew tap.
+
+* [project-env-logo](https://github.com/Project-Env/project-env-logo): Project-Env logo sources.
+
 #### Supported Tools
 * JDK
 * NodeJS
