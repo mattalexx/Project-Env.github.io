@@ -13,7 +13,7 @@ Before being able to start contributing to a project, I often have to follow pro
 
 Until today, I couldn't find any solution which completely handles that part of a project. That's why I created Project-Env.
 
-## Requirements
+## Requirements for the solution
 * Support for Windows, Linux and macOS
 * Support for project specific tool configuration &#8594; no side effects in other projects
 * Support for automatic configuration of installed tools in development tools/environments
