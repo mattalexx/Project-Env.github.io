@@ -1,5 +1,7 @@
 ---
 layout: default
+title: Project-Env
+description: Yet another project tools manager
 ---
 
 ## TL;DR
