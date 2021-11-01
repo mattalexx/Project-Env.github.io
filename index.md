@@ -1,4 +1,6 @@
-# About Project-Env
+---
+layout: default
+---
 
 ## TL;DR
 Project-Env automatically maintains the project-local setup of project specific tools like a JDK or NodeJS in a shell/IDE/CI environment.
