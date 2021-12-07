@@ -30,7 +30,7 @@ Currently, the following integrations exists for Project-Env:
 * [project-env-shell](https://github.com/Project-Env/project-env-shell): Shell integration application, which call the CLI to set up all tools and generates a Shell script to set up the tools in a shell environment (e.g. ZSH, Cygwin, ...).
 * [project-env-intellij](https://github.com/Project-Env/project-env-intellij-plugin): IntelliJ plugin, which calls the CLI to set up all tools and configures IntelliJ to use the installed tools.
 * [project-env-github-action](https://github.com/Project-Env/project-env-github-action): GitHub action, which calls the CLI to set up all tools and makes them available for the following steps.
-* [project-env-jenkins-plugin](https://github.com/jenkinsci/project-env-jenkins-plugin): Jenkins Pipeline plugin, which calls the CLI to set up all tools and makes them available in the closure. Note that the plugin cannot be installed yet through the Jenkins plugin manager, as the plugin hosting request is still open.
+* [project-env-jenkins-plugin](https://github.com/jenkinsci/project-env-jenkins-plugin): Jenkins Pipeline plugin, which calls the CLI to set up all tools and makes them available in the closure.
 
 # Similar projects/tools
 * https://sdkman.io
