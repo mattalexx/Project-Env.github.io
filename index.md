@@ -10,6 +10,8 @@ nav_order: 1
 ## TL;DR
 Project-Env automatically maintains the project-local setup of project specific tools like a JDK or NodeJS in a shell/IDE/CI environment.
 
+[Get started now](./docs/getting-started.md){: .btn .btn-purple }
+
 ## Problem
 
 Before being able to start contributing to a project, I often have to follow project setup instructions. One thing, which is needed for almost every project, is installing and configuring required tools like a JDK or NodeJS. As I am working on multiple projects at the same time, the management of multiple versions of the same tool type gets complicated. If you for example have to install GraalVM for one project and AdoptOpenJDK for another, you have to ensure, that your IDE/Shell is always using the correct JDK in each project. It even gets more tedious if you have to maintain the tool versions in a CI environment (e.g. in Jenkins through global tools).
@@ -32,4 +34,4 @@ The idea is to have a simple configuration file in each project which specifies 
 
 --- 
 
-[Getting started](./docs/getting-started.md){: .btn }
+[Get started now](./docs/getting-started.md){: .btn .btn-purple }
