@@ -2,9 +2,17 @@ title: Project-Env
 description: Yet another project tools manager
 theme: just-the-docs
 repository: Project-Env/Project-Env.github.io
+
 url: https://projectenv.io
 baseurl: ''
+
 search_enabled: true
 search.heading_level: 3
 logo: "/assets/images/logo.png"
+
 include: [ CNAME ]
+
+aux_links:
+  "GitHub":
+    - "https://github.com/Project-Env"
+aux_links_new_tab: true
