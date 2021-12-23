@@ -1,0 +1,200 @@
+{"0": {
+    "doc": "CLI application",
+    "title": "Project-Env CLI",
+    "content": ". The Project-Env CLI represents the raw core of Project-Env which allows the setup of tools based on a project-env.toml configuration file and therefore the integration of Project-Env into an existing environment (e.g IDE). See Project-Env for more details. ",
+    "url": "https://projectenv.io/docs/cli.html#project-env-cli",
+    "relUrl": "/docs/cli.html#project-env-cli"
+  },"1": {
+    "doc": "CLI application",
+    "title": "Configuration file",
+    "content": "# Directory where the tools should be installed. # Must located in the project directory. tools_directory = \"&lt;path&gt;\" [jdk] # Distribution version according to the Disco API. # See https://api.foojay.io/disco/v2.0/distributions?include_synonyms=false version = \"&lt;version&gt;\" # Distribution name according to the Disco API. # See https://api.foojay.io/disco/v2.0/distributions?include_versions=false distribution = \"&lt;name&gt;\" # [optional] # Arbitrary commands which should be executed after extracting. post_extraction_commands = [ \"&lt;command&gt;\", ] [maven] # The Maven version. # See https://archive.apache.org/dist/maven/binaries version = \"&lt;version&gt;\" # [optional] # The project-relative path to a Maven settings file which should be used as a global settings file. # Note that the parameter is ignored, in case the file cannot not be found. global_settings_file = \"&lt;path&gt;\" # [optional] # The project-relative path to a Maven settings file which should be used as a user settings file. # Note that the parameter is ignored, in case the file cannot not be found. user_settings_file = \"&lt;path&gt;\" # [optional] # Arbitrary commands which should be executed after extracting. post_extraction_commands = [ \"&lt;command&gt;\", ] [gradle] # The Gradle version. # See https://gradle.org/releases version = \"&lt;version&gt;\" # [optional] # Arbitrary commands which should be executed after extracting. post_extraction_commands = [ \"&lt;command&gt;\", ] [nodejs] # The NodeJS version. # See https://nodejs.org/download/release version = \"&lt;version&gt;\" # [optional] # Arbitrary commands which should be executed after extracting. post_extraction_commands = [ \"&lt;command&gt;\", ] [git] # A directory with Git hooks which should be copied into the '.git/hooks' directory. hooks_directory = \"&lt;path&gt;\" [[generic]] # [optional], if 'download_urls' is configured # The URL to download the tool from. download_url = \"&lt;url&gt;\" # [optional], if 'download_url' is configured # OS specific download URL's (they have precedence over the non-OS download URL). # Valid values for os are 'macos', 'windows' and 'linux'. download_urls = [ { target_os = \"&lt;os&gt;\", download_url = \"&lt;url&gt;\" }, ] # [optional] # The main executable of the tool. # The executable is resolved according the configured path elements. primary_executable = \"&lt;path&gt;\" # [optional] # A map of environment variables, which need to be exposed. # All values are resolved according the tool distribution root. environment_variables = { \"&lt;key&gt;\" = \"&lt;value&gt;\" } # [optional] # A list of path elements, which needs to be added to the PATH variable. # All values are resolved according the tool distribution root. path_elements = [\"&lt;path&gt;\"] # [optional] # Arbitrary commands which should be executed after extracting. post_extraction_commands = [ \"&lt;command&gt;\", ] . Examples . See project-env.toml used for integration testing. Usage of environment variables . If needed, environment variables can be injected by using the syntax ${&lt;env&gt;}. Special case username: As the name of the environment variable containing the username is OS specific, both USERNAME and USER can be used to inject the username. If USERNAME is used, but no environment variable with that name can be found, the value of the variable USER is used. This works in the opposite direction too. ",
+    "url": "https://projectenv.io/docs/cli.html#configuration-file",
+    "relUrl": "/docs/cli.html#configuration-file"
+  },"2": {
+    "doc": "CLI application",
+    "title": "Installation",
+    "content": "Homebrew . brew install --cask project-env/tap/project-env-cli . ",
+    "url": "https://projectenv.io/docs/cli.html#installation",
+    "relUrl": "/docs/cli.html#installation"
+  },"3": {
+    "doc": "CLI application",
+    "title": "CLI application",
+    "content": "This content has been included from the project-env-cli Github repository. ",
+    "url": "https://projectenv.io/docs/cli.html",
+    "relUrl": "/docs/cli.html"
+  },"4": {
+    "doc": "Getting started",
+    "title": "Getting started",
+    "content": "To simplify integrations, I created a CLI application which contains the heavy part of Project-Env, which is the setup and configuration of tools defined in a Project-Env configuration file. The returned tools info can then be used by an integration to configure them in the corresponding environment. ",
+    "url": "https://projectenv.io/docs/getting-started.html",
+    "relUrl": "/docs/getting-started.html"
+  },"5": {
+    "doc": "Getting started",
+    "title": "Set up config file",
+    "content": "To get started with Project-Env in a project, you first need to set up the Project-Env config file. Since the configuration options are strongly linked to the used CLI application version, the options are documented at the same location as the one for the CLI. ",
+    "url": "https://projectenv.io/docs/getting-started.html#set-up-config-file",
+    "relUrl": "/docs/getting-started.html#set-up-config-file"
+  },"6": {
+    "doc": "Getting started",
+    "title": "Set up CLI application",
+    "content": "If you want to use Project-Env on your local development machine, you need to download the CLI application and make it available through the PATH variable (there exist some automatic installation options too). Integrations like the one for Github Actions or the Jenkins Pipeline plugin will set up the CLI automatically. ",
+    "url": "https://projectenv.io/docs/getting-started.html#set-up-cli-application",
+    "relUrl": "/docs/getting-started.html#set-up-cli-application"
+  },"7": {
+    "doc": "Getting started",
+    "title": "Set up integrations",
+    "content": "Choose one or more integrations and set them up according to the corresponding documentation. ",
+    "url": "https://projectenv.io/docs/getting-started.html#set-up-integrations",
+    "relUrl": "/docs/getting-started.html#set-up-integrations"
+  },"8": {
+    "doc": "Github Actions",
+    "title": "Project-Env Github Action",
+    "content": ". This action sets up the runner environment with the Project-Env shell. See Project-Env for more details about Project-Env. ",
+    "url": "https://projectenv.io/docs/integrations/github-action.html#project-env-github-action",
+    "relUrl": "/docs/integrations/github-action.html#project-env-github-action"
+  },"9": {
+    "doc": "Github Actions",
+    "title": "Inputs",
+    "content": " ",
+    "url": "https://projectenv.io/docs/integrations/github-action.html#inputs",
+    "relUrl": "/docs/integrations/github-action.html#inputs"
+  },"10": {
+    "doc": "Github Actions",
+    "title": "cli-version",
+    "content": "Required Version of Project-Env CLI to use. ",
+    "url": "https://projectenv.io/docs/integrations/github-action.html#cli-version",
+    "relUrl": "/docs/integrations/github-action.html#cli-version"
+  },"11": {
+    "doc": "Github Actions",
+    "title": "cli-debug",
+    "content": "Whether to activate the debug mode of the Project-Env CLI. ",
+    "url": "https://projectenv.io/docs/integrations/github-action.html#cli-debug",
+    "relUrl": "/docs/integrations/github-action.html#cli-debug"
+  },"12": {
+    "doc": "Github Actions",
+    "title": "Example usage",
+    "content": "uses: project-env/project-env-github-action@v1.0.0 with: cli-version: '3.0.4' . ",
+    "url": "https://projectenv.io/docs/integrations/github-action.html#example-usage",
+    "relUrl": "/docs/integrations/github-action.html#example-usage"
+  },"13": {
+    "doc": "Github Actions",
+    "title": "Github Actions",
+    "content": "This content has been included from the project-env-github-action Github repository. ",
+    "url": "https://projectenv.io/docs/integrations/github-action.html",
+    "relUrl": "/docs/integrations/github-action.html"
+  },"14": {
+    "doc": "Integrations",
+    "title": "Integrations",
+    "content": "Currently, the following integrations exists for Project-Env: . | Shell: Shell integration application, which call the CLI to set up all tools and generates a Shell script to set up the tools in a shell environment (e.g. ZSH, Cygwin, …). | IntelliJ-Plugin: IntelliJ plugin, which calls the CLI to set up all tools and configures IntelliJ to use the installed tools. | Github-Action: GitHub action, which calls the CLI to set up all tools and makes them available for the following steps. | Jenkins-Plugin: Jenkins Pipeline plugin, which calls the CLI to set up all tools and makes them available in the closure. | . ",
+    "url": "https://projectenv.io/docs/integrations/",
+    "relUrl": "/docs/integrations/"
+  },"15": {
+    "doc": "Introduction",
+    "title": "Introduction",
+    "content": " ",
+    "url": "https://projectenv.io/",
+    "relUrl": "/"
+  },"16": {
+    "doc": "Introduction",
+    "title": "TL;DR",
+    "content": "Project-Env automatically maintains the project-local setup of project specific tools like a JDK or NodeJS in a shell/IDE/CI environment. Get started now . ",
+    "url": "https://projectenv.io/#tldr",
+    "relUrl": "/#tldr"
+  },"17": {
+    "doc": "Introduction",
+    "title": "Problem",
+    "content": "Before being able to start contributing to a project, I often have to follow project setup instructions. One thing, which is needed for almost every project, is installing and configuring required tools like a JDK or NodeJS. As I am working on multiple projects at the same time, the management of multiple versions of the same tool type gets complicated. If you for example have to install GraalVM for one project and AdoptOpenJDK for another, you have to ensure, that your IDE/Shell is always using the correct JDK in each project. It even gets more tedious if you have to maintain the tool versions in a CI environment (e.g. in Jenkins through global tools). Until today, I couldn’t find any solution which completely handles that part of a project. That’s why I created Project-Env. Requirements for the solution . | Support for Windows, Linux and macOS | Support for project specific tool configuration → no side effects in other projects | Support for automatic configuration of installed tools in development tools/environments | . ",
+    "url": "https://projectenv.io/#problem",
+    "relUrl": "/#problem"
+  },"18": {
+    "doc": "Introduction",
+    "title": "Idea",
+    "content": "The idea is to have a simple configuration file in each project which specifies which tools are needed to work with the project. This file can then be used by any tool to set itself up with the required third-party tools. ",
+    "url": "https://projectenv.io/#idea",
+    "relUrl": "/#idea"
+  },"19": {
+    "doc": "Introduction",
+    "title": "Similar projects/tools",
+    "content": ". | https://sdkman.io | https://asdf-vm.com | https://volta.sh | . Get started now . ",
+    "url": "https://projectenv.io/#similar-projectstools",
+    "relUrl": "/#similar-projectstools"
+  },"20": {
+    "doc": "IntelliJ IDEA",
+    "title": "Project-Env IntelliJ-Plugin",
+    "content": ". This plugin configures tools setup by the Project-Env CLI (see Project-Env for more details), as far as possible, in the IntelliJ project settings. Currently, the following project settings are configured automatically if the tool is declared: . | JDK: Adds the JDK to the JDK table and sets it as project JDK | Maven: . | Sets the project specific path to Maven to the corresponding location. | Makes all environment variables of all declared tools available to Maven executions | Configures the user specific settings file - the global settings file is (if existing) linked into the Maven distribution. | . | Gradle: . | Sets the project specific path to Gradle to the corresponding location. | Makes all environment variables of all declared tools available to Gradle executions | . | Node: Adds a new interpreter and set it as project default interpreter | . Please note that changes in this file are only loaded once after opening the project. Afterwards, the Project-Env must be manually refreshed by using the action under Tools &gt; Project-Env &gt; Refresh️. ",
+    "url": "https://projectenv.io/docs/integrations/intellij-plugin.html#project-env-intellij-plugin",
+    "relUrl": "/docs/integrations/intellij-plugin.html#project-env-intellij-plugin"
+  },"21": {
+    "doc": "IntelliJ IDEA",
+    "title": "Installation",
+    "content": ". | Using IDE built-in plugin system: . Preferences &gt; Plugins &gt; Marketplace &gt; Search for \"Project-Env\" &gt; Install Plugin . | Manually: . Download the latest release and install it manually using Preferences &gt; Plugins &gt; ⚙️ &gt; Install plugin from disk... | . Plugin based on the IntelliJ Platform Plugin Template. ",
+    "url": "https://projectenv.io/docs/integrations/intellij-plugin.html#installation",
+    "relUrl": "/docs/integrations/intellij-plugin.html#installation"
+  },"22": {
+    "doc": "IntelliJ IDEA",
+    "title": "IntelliJ IDEA",
+    "content": "This content has been included from the project-env-intellij-plugin Github repository. ",
+    "url": "https://projectenv.io/docs/integrations/intellij-plugin.html",
+    "relUrl": "/docs/integrations/intellij-plugin.html"
+  },"23": {
+    "doc": "Jenkins Pipeline",
+    "title": "Pipeline Project-Env Plugin",
+    "content": ". ",
+    "url": "https://projectenv.io/docs/integrations/jenkins-plugin.html#pipeline-project-env-plugin",
+    "relUrl": "/docs/integrations/jenkins-plugin.html#pipeline-project-env-plugin"
+  },"24": {
+    "doc": "Jenkins Pipeline",
+    "title": "Introduction",
+    "content": "This plugin allows you to use Project-Env within Jenkins pipelines. See Project-Env for more details. ",
+    "url": "https://projectenv.io/docs/integrations/jenkins-plugin.html#introduction",
+    "relUrl": "/docs/integrations/jenkins-plugin.html#introduction"
+  },"25": {
+    "doc": "Jenkins Pipeline",
+    "title": "Getting started",
+    "content": "node { withProjectEnv( // The Project-Env CLI version which should be used. cliVersion: string, // Whether to activate the debug mode in the Project-Env CLI. // If not configured, the debug mode will be deactivated. cliDebug: boolean, // The path to the Project-Env CLI configuration file. // If not configured, project-env.toml will be used. configFile: string ) { // ... } } . Example . node { withProjectEnv(cliVersion: '3.4.0') { // ... } } . ",
+    "url": "https://projectenv.io/docs/integrations/jenkins-plugin.html#getting-started",
+    "relUrl": "/docs/integrations/jenkins-plugin.html#getting-started"
+  },"26": {
+    "doc": "Jenkins Pipeline",
+    "title": "Contributing",
+    "content": "See contribution guidelines . ",
+    "url": "https://projectenv.io/docs/integrations/jenkins-plugin.html#contributing",
+    "relUrl": "/docs/integrations/jenkins-plugin.html#contributing"
+  },"27": {
+    "doc": "Jenkins Pipeline",
+    "title": "Changelog",
+    "content": "See releases . ",
+    "url": "https://projectenv.io/docs/integrations/jenkins-plugin.html#changelog",
+    "relUrl": "/docs/integrations/jenkins-plugin.html#changelog"
+  },"28": {
+    "doc": "Jenkins Pipeline",
+    "title": "Jenkins Pipeline",
+    "content": "This content has been included from the pipeline-project-env-plugin Github repository. ",
+    "url": "https://projectenv.io/docs/integrations/jenkins-plugin.html",
+    "relUrl": "/docs/integrations/jenkins-plugin.html"
+  },"29": {
+    "doc": "Shell",
+    "title": "Project-Env Shell",
+    "content": ". The Project-Env Shell integration application allows to use tools setup by the Project-Env CLI in a shell environment. See Project-Env for more details. ",
+    "url": "https://projectenv.io/docs/integrations/shell.html#project-env-shell",
+    "relUrl": "/docs/integrations/shell.html#project-env-shell"
+  },"30": {
+    "doc": "Shell",
+    "title": "Installation",
+    "content": "Homebrew . brew install --cask project-env/tap/project-env-shell . ",
+    "url": "https://projectenv.io/docs/integrations/shell.html#installation",
+    "relUrl": "/docs/integrations/shell.html#installation"
+  },"31": {
+    "doc": "Shell",
+    "title": "Shell integration examples",
+    "content": "ZSH . To use Project-Env managed tools in your ZSH shell, create the following script: . #!/bin/zsh if [[ ! -f \"project-env.toml\" ]]; then zsh else project-env-shell --config-file=\"project-env.toml\" --output-template=zsh --output-file=.project-env source .project-env zsh fi . To use the tools, you now only need to call the script to setup the shell. For example, if you want to start your IntelliJ Terminal with Project-Env tools setup, configure the following command in the Terminal settings: . /bin/zsh --login -c &lt;path to script&gt; . Cygwin (started through Windows CMD) . To use Project-Env managed tools in your Cygwin shell, create the following script: . @echo off if not exist project-env.toml ( bash.exe ) else ( project-env-shell.exe --config-file=project-env.toml --output-template=cygwin --output-file=.project-env dos2unix .project-env bash.exe --init-file .project-env ) . To use the tools, you now only need to call the script to setup the shell. ",
+    "url": "https://projectenv.io/docs/integrations/shell.html#shell-integration-examples",
+    "relUrl": "/docs/integrations/shell.html#shell-integration-examples"
+  },"32": {
+    "doc": "Shell",
+    "title": "Shell",
+    "content": "This content has been included from the project-env-shell Github repository. ",
+    "url": "https://projectenv.io/docs/integrations/shell.html",
+    "relUrl": "/docs/integrations/shell.html"
+  }
+}
