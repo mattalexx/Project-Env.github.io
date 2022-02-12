@@ -6,7 +6,7 @@ nav_order: 2
 ---
 
 # Getting started
-To simplify integrations, I created a [CLI application](./docs/cli.md) which contains the heavy part of Project-Env, which is the setup and configuration of tools defined in a Project-Env configuration file. The returned tools info can then be used by an integration to configure them in the corresponding environment.
+To simplify integrations, I created a [CLI application](./cli.md) which contains the heavy part of Project-Env, which is the setup and configuration of tools defined in a Project-Env configuration file. The returned tools info can then be used by an integration to configure them in the corresponding environment.
 
 ## Set up config file
 To get started with Project-Env in a project, you first need to set up the Project-Env config file. Since the configuration options are strongly linked to the used [CLI application](./cli.md) version, the options are documented at the same location as the one for the CLI.
